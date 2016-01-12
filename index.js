@@ -39,7 +39,7 @@ RiotCompiler.prototype.compile = function(data, path, callback) {
     return callback(error);
   }
   var result = {
-    data: compiled
+    data: "var riot = require(\"riot\");\n" + compiled
   };
   return callback(null, result);
 };
